@@ -10,7 +10,7 @@ reader = open(BAM.Reader, ARGS[1])
 read_lengths =  Int64[]
 
 for record in reader
-    # `record` is a BAM.Record object.
+    # "record" is a BAM.Record object.
     if BAM.ismapped(record)
         # Print the mapped position.
         append!(read_lengths, XAM.BAM.alignlength(record))
